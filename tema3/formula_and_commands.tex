@@ -1,4 +1,4 @@
-% !TEX TS-program = xelatex
+% !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 
 
@@ -75,10 +75,12 @@
     \renewcommand{\txtscript}[1]{\textsf{\scriptsize{}#1}}
     \end{verbatim}
 
-    \[
-    \boxed{\rho_\txtscript{молока}=\frac{M_\txtscript{молока}}{V_\txtscript{молока}}} 
-    \]
+%    \newcommand{\myind}{\txtscript{молока}}
  
+%    \[
+%    \boxed{\rho_\txtscript{молока}=\frac{M_\txtscript{молока}}{V_\txtscript{молока}}} 
+%    \]
+% 
 \section{Счётчики}
 
 
@@ -92,14 +94,13 @@
 \verb|     \stepcounter{nomer} |
 
  
-\verb|\thenomer | 
+\verb|\thenomer| 
 \thenomer
 
 
 \verb|     \renewcommand{\thenomer}{\alph{nomer}}   |
      \renewcommand{\thenomer}{\alph{nomer}}   
 
- 
 \verb|\thenomer | 
 \thenomer
 
@@ -222,7 +223,9 @@
         
         
    \begin{itemize}
-       \item Пункт 
+   	\renewcommand{\labelitemi}{}
+       \item Пункт 1 
+       \item пункт 2
      \end{itemize}   
         
     \begin{description}
@@ -233,6 +236,16 @@
         \item[Third] \hrulefill \\
         The third etc \ldots
     \end{description}    
-        
-        
+   
+   \newtheorem{thm}{Теорема}     
+     \newtheorem{zadacha}{Задача} 
+     
+   \begin{thm}
+   	Пифагоровы штаны во все стороны равны
+   	\end{thm}  
+   	
+   	\begin{thm}
+   		Слоны любят воду
+   	\end{thm}  
+          
 \end{document}
